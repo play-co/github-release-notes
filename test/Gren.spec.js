@@ -51,24 +51,24 @@ describe('Gren', () => {
             }
         ];
 
-        describe('_sortReleasesByDate', () => {
+        describe('_sortReleasesByTagCommitDate', () => {
             it('Should sort an Array by it\'s date property', () => {
                 const sortedBlocks = [
                     {
-                        date: '2017-10-01T23:00:00.000Z'
+                        commitDate: '2017-10-01T23:00:00.000Z'
                     },
                     {
-                        date: '2017-09-01T23:00:00.000Z'
+                        commitDate: '2017-09-01T23:00:00.000Z'
                     },
                     {
-                        date: '2017-05-01T23:00:00.000Z'
+                        commitDate: '2017-05-01T23:00:00.000Z'
                     },
                     {
-                        date: '2016-09-01T23:00:00.000Z'
+                        commitDate: '2016-09-01T23:00:00.000Z'
                     }
                 ];
 
-                assert.deepEqual(gren._sortReleasesByDate(blocks), sortedBlocks, 'Given release blocks');
+                assert.deepEqual(gren._sortReleasesByTagCommitDate(blocks), sortedBlocks, 'Given release blocks');
             });
         });
 
