@@ -1,8 +1,11 @@
 {
-    "name": "github-release-notes",
+    "name": "@play-co/github-release-notes",
     "version": "0.18.0",
     "description": "Create a release from a tag and uses issues or commits to creating the release notes. It also can generate a CHANGELOG.md file based on the release notes (or generate a brand new).",
     "main": "./github-release-notes.js",
+    "publishConfig": {
+        "registry":"https://npm.pkg.github.com"
+    },
     "scripts": {
         "start": "node github-release-notes.js",
         "test": "./node_modules/.bin/nyc mocha --reporter=nyan --compilers=js:babel-register",
